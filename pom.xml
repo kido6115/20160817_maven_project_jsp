@@ -447,6 +447,11 @@
     <dependencies>
         <!-- Modules, include the ones needed by the application -->
         <dependency>
+    <groupId>commons-fileupload</groupId>
+    <artifactId>commons-fileupload</artifactId>
+    <version>1.3.2</version>
+</dependency>
+        <dependency>
             <groupId>org.apache.marmotta</groupId>
             <artifactId>marmotta-core</artifactId>
             <version>${marmotta.version}</version>
