@@ -28,10 +28,6 @@
 
 
     <properties>
-        <marmotta.home>${java.io.tmpdir}${file.separator}test</marmotta.home>
-        <marmotta.context>/</marmotta.context>
-        <marmotta.port>8080</marmotta.port>
-        <marmotta.backend>kiwi</marmotta.backend>
 
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
 
@@ -211,65 +207,9 @@
 
         <!-- backend profiles -->
 
-        <profile>
-            <id>kiwi</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-                <property>
-                    <name>marmotta.backend</name>
-                    <value>kiwi</value>
-                </property>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>org.apache.marmotta</groupId>
-                    <artifactId>marmotta-backend-kiwi</artifactId>
-                    <version>${marmotta.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.marmotta</groupId>
-                    <artifactId>marmotta-ldcache-kiwi</artifactId>
-                    <version>${marmotta.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.marmotta</groupId>
-                    <artifactId>marmotta-reasoner-kiwi</artifactId>
-                    <version>${marmotta.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.marmotta</groupId>
-                    <artifactId>marmotta-versioning-kiwi</artifactId>
-                    <version>${marmotta.version}</version>
-                </dependency>
-            </dependencies>
-        </profile>
+    
 
-        <profile>
-            <id>titan-berkeleydb</id>
-            <activation>
-                <property>
-                    <name>marmotta.backend</name>
-                    <value>titan-berkeleydb</value>
-                </property>
-            </activation>
-            <dependencies>
-                <dependency>
-                    <groupId>org.apache.marmotta</groupId>
-                    <artifactId>marmotta-backend-titan</artifactId>
-                    <version>${marmotta.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.marmotta</groupId>
-                    <artifactId>marmotta-ldcache-file</artifactId>
-                    <version>${marmotta.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>com.thinkaurelius.titan</groupId>
-                    <artifactId>titan-berkeleyje</artifactId>
-                    <version>${titan.version}</version>
-                </dependency>
-            </dependencies>
-        </profile>
+
 
         <profile>
             <id>titan-hbase</id>
@@ -280,16 +220,6 @@
                 </property>
             </activation>
             <dependencies>
-                <dependency>
-                    <groupId>org.apache.marmotta</groupId>
-                    <artifactId>marmotta-backend-titan</artifactId>
-                    <version>${marmotta.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.apache.marmotta</groupId>
-                    <artifactId>marmotta-ldcache-file</artifactId>
-                    <version>${marmotta.version}</version>
-                </dependency>
                 <dependency>
                     <groupId>com.thinkaurelius.titan</groupId>
                     <artifactId>titan-hbase</artifactId>
@@ -446,6 +376,8 @@
 
     <dependencies>
         <!-- Modules, include the ones needed by the application -->
+        
+      
         
         <dependency>
     <groupId>commons-fileupload</groupId>
